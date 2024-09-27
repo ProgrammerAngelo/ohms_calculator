@@ -10,25 +10,27 @@ def ohms_calculator():
         #for invalid input
         else:
             print("\nInvalid. Please input 1,2 or 3\n")
-        
+    #for calculating voltage
     if choice == 1:
         current = float(input("\nEnter the current value: "))
         resistance = float(input("\nEnter the resistance value: "))
         voltage = current * resistance
         print(f"The calculated voltage is: {voltage} volts.")
-    
+    #for calculating current
     elif choice == 2:
         voltage = float(input("\nEnter the voltage value: "))
         resistance = float(input("\nEnter the resistance value: "))
+        #for dealing with zero value for resistance
         if resistance == 0:
             print("\nInvalid. Resistance cannot be zero for this calculation")
         else:
             current = voltage/resistance
             print(f"The current is {current} amperes")
-    
+    # for calculating resistance
     elif choice == 3:
         voltage = float(input("\nEnter the voltage value: "))
         current = float(input("\nEnter the current value: "))
+        #for dealing with zero value for current
         if current == 0:
             print("\nInvalid. current cannot be zero for this calculation")
         else:
